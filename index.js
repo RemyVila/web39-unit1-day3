@@ -4,7 +4,7 @@ const express = require('express')
 const server = express()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'client/build')))
-console.log(process.env.NODE_ENV)
+console.log(process.env)
 // on Heroku machine, an env variable is called "NODE_ENV" -> "production"
 if (process.env.NODE_ENV === 'development') {
   const cors = require('cors')
