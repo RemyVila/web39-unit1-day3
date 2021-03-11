@@ -16,7 +16,7 @@ server.get('/api/hello', (req, res) => {
 })
 // catch-all that just sends back index.html
 server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'))
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
 })
 const PORT = process.env.PORT || 4000
 server.listen(PORT, () => {
